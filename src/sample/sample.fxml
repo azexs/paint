@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="paane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.Controller">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <ToolBar prefHeight="40.0" prefWidth="800.0">
+                    <items>
+                        <Button mnemonicParsing="false" onAction="#newbtn" text="New"/>
+                        <Button mnemonicParsing="false" onAction="#savebtn" text="Save"/>
+                        <Button mnemonicParsing="false" text="Open"/>
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0"/>
+                        <ToggleButton fx:id="circlebtn" mnemonicParsing="false" onAction="#circlebuttonpressed"
+                                      text="Circle"/>
+                        <ToggleButton fx:id="rectanglebtn" mnemonicParsing="false" onAction="#rectanglebuttonpressd"
+                                      text="Rectangle"/>
+                        <ToggleButton fx:id="polygonbtn" mnemonicParsing="false" onAction="#polygonbuttonpressed"
+                                      text="Polygon"/>
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0"/>
+                        <ToggleButton fx:id="editbtn" mnemonicParsing="false" onAction="#editbuttonpressed"
+                                      text="Edit"/>
+                        <Button mnemonicParsing="false" onAction="#deletebtnclicked" text="Delete"/>
+                        <Button mnemonicParsing="false" onAction="#infobtn" text="Info"/>
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0"/>
+                        <ColorPicker fx:id="cp" onAction="#colourbtnclicked"/>
+
+                    </items>
+                </ToolBar>
+                <Pane fx:id="canvas" onMouseClicked="#canvasmouseclicked" onMouseDragged="#canvasmousedragged"
+                      onMouseMoved="#canvasmousemoved" onMousePressed="#canvasmousepressed"
+                      onMouseReleased="#canvasmousereleased" onScroll="#canvasscroll" prefHeight="530.0"
+                      prefWidth="800.0"/>
+                <Label fx:id="label" prefHeight="30.0" prefWidth="800.0"/>
+            </children>
+        </VBox>
+    </children>
+</Pane>
